@@ -1,0 +1,82 @@
+<Page
+    x:Class="Digits.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Digits"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.BottomAppBar>
+        <CommandBar x:Name="commandBar">
+            <AppBarButton x:Uid="AddTokenButton" Icon="Add" Click="AppBarButton_Add_Click" />
+
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Uid="ManualEntryMenuButton" Icon="Edit" Click="ManualEntry_Click" />
+                <AppBarSeparator/>
+                <AppBarButton x:Uid="SettingsButton" Icon="Setting" Click="Settings_Click" />
+                <AppBarButton x:Uid="AboutButton" Icon="Repair" Click="About_Click" />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+    <Grid HorizontalAlignment="Stretch" Margin="16 8 16 8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Uid="MainHeading" Grid.Row="0" FontSize="16" Margin="0 0 0 16" FontWeight="Bold"/>
+
+        <ListView Grid.Row="1" x:Name="servicesList">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="Margin" Value="0 0 0 4"/>
+                </Style>
+            </ListView.ItemContainerStyle>
+
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:DatabaseElement">
+                    <Grid Background="{ThemeResource RowBackgroundBrush}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Main row content (tappable to reveal OTP code) -->
+                        <Button Grid.Column="0" Background="Transparent" BorderThickness="0" Padding="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Click="RevealCode_Click" PointerPressed="Row_PointerPressed" Holding="Button_Holding">
+                            <FlyoutBase.AttachedFlyout>
+                                <MenuFlyout Placement="Bottom">
+                                    <MenuFlyoutItem x:Uid="EditTokenMenu" CommandParameter="{Binding}" Click="EditService_Click"/>
+                                    <MenuFlyoutItem x:Uid="DeleteTokenMenu" CommandParameter="{Binding}" Click="DeleteService_Click"/>
+                                </MenuFlyout>
+                            </FlyoutBase.AttachedFlyout>
+
+                            <RelativePanel>
+                                <Grid x:Name="serviceIcon" Width="56" Height="56" RelativePanel.AlignLeftWithPanel="True">
+                                    <Rectangle Fill="{ThemeResource RowLogoBackgroundBrush}"/>
+                                    <TextBlock Text="{Binding IconGlyph}" Visibility="{Binding IconGlyphVisibility}" FontSize="22" FontWeight="Bold" Foreground="{ThemeResource RowSubtitleBrush}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    <Image Source="{Binding IconPath}" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="8 8"/>
+                                </Grid>
+
+                                <StackPanel x:Name="serviceOverlay" Padding="8" RelativePanel.RightOf="serviceIcon" RelativePanel.AlignRightWithPanel="True">
+                                    <TextBlock Text="{Binding Issuer}" FontSize="16" FontWeight="Bold" TextTrimming="CharacterEllipsis"/>
+                                    <TextBlock Text="{Binding Label}" FontSize="14" Foreground="{ThemeResource RowSubtitleBrush}" TextTrimming="CharacterEllipsis"/>
+                                </StackPanel>
+
+                                <StackPanel x:Name="otpOverlay" Visibility="Collapsed" Padding="8" RelativePanel.RightOf="serviceIcon" RelativePanel.AlignRightWithPanel="True">
+                                    <TextBlock x:Name="revealedOtpCode" FontSize="28" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </StackPanel>
+
+                                <ProgressBar x:Name="countdownBar" Visibility="Collapsed" Height="3" Minimum="0" Maximum="1" Value="1" RelativePanel.AlignBottomWithPanel="True" RelativePanel.RightOf="serviceIcon" RelativePanel.AlignRightWithPanel="True"/>
+                            </RelativePanel>
+                        </Button>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

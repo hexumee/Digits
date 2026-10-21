@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutButton.Label" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="AboutDialog.Title" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="AboutDialog.CloseButtonText" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="AboutDescription.Text" xml:space="preserve">
+    <value>Digits создаёт одноразовые коды TOTP и HOTP из QR-кодов или ключей, введённых вручную. Секреты защищены для вашей учётной записи Windows, а резервные копии зашифрованы парольной фразой.</value>
+  </data>
+  <data name="Icons8Attribution.Content" xml:space="preserve">
+    <value>Иконки от Icons8</value>
+  </data>
+  <data name="AboutProductName.Text" xml:space="preserve">
+    <value>Digits</value>
+  </data>
+  <data name="AboutTagline.Text" xml:space="preserve">
+    <value>Генератор кодов двухфакторной аутентификации</value>
+  </data>
+  <data name="AboutVersion" xml:space="preserve">
+    <value>Версия {0}</value>
+  </data>
+  <data name="AccountHeader" xml:space="preserve">
+    <value>Учётная запись</value>
+  </data>
+  <data name="AccountPlaceholder" xml:space="preserve">
+    <value>Имя или адрес</value>
+  </data>
+  <data name="AddTokenButton.Label" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="AlgorithmHeader" xml:space="preserve">
+    <value>Алгоритм</value>
+  </data>
+  <data name="AppLockHelp.Text" xml:space="preserve">
+    <value>При блокировке для просмотра кодов потребуется PIN-код устройства или Windows Hello. Сначала настройте один из этих способов в параметрах Windows.</value>
+  </data>
+  <data name="AppLockToggleLabel.Text" xml:space="preserve">
+    <value>Запрашивать подтверждение при возврате в приложение</value>
+  </data>
+  <data name="AppLockToggle.OffContent" xml:space="preserve">
+    <value>Выключено</value>
+  </data>
+  <data name="AppLockToggle.OnContent" xml:space="preserve">
+    <value>Включено</value>
+  </data>
+  <data name="BackupDecryptError" xml:space="preserve">
+    <value>Не удалось открыть резервную копию. Проверьте парольную фразу и целостность файла.</value>
+  </data>
+  <data name="BackupDescription.Text" xml:space="preserve">
+    <value>Импортируйте данные из зашифрованной копии или сохраните текущие токены в файл резервной копии.</value>
+  </data>
+  <data name="BackupHeading.Text" xml:space="preserve">
+    <value>РЕЗЕРВНЫЕ КОПИИ</value>
+  </data>
+  <data name="BackupExportIntroText" xml:space="preserve">
+    <value>Резервная копия содержит секреты OTP. Используйте длинную парольную фразу и сохраните её отдельно: без неё восстановить копию нельзя.</value>
+  </data>
+  <data name="BackupImportIntroText" xml:space="preserve">
+    <value>Введите парольную фразу, которой зашифровали эту копию. После её открытия Digits импортирует токены.</value>
+  </data>
+  <data name="BackupConfirmationField.Header" xml:space="preserve">
+    <value>Повторите парольную фразу</value>
+  </data>
+  <data name="BackupPasswordField.Header" xml:space="preserve">
+    <value>Парольная фраза</value>
+  </data>
+  <data name="BackupPassphraseMinLength" xml:space="preserve">
+    <value>Парольная фраза должна содержать не менее 12 символов.</value>
+  </data>
+  <data name="BackupPassphraseMismatch" xml:space="preserve">
+    <value>Парольные фразы не совпадают.</value>
+  </data>
+  <data name="BackupPasswordField.PlaceholderText" xml:space="preserve">
+    <value>Не менее 12 символов</value>
+  </data>
+  <data name="BackupPasswordDialog.SecondaryButtonText" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="MessageDialog.Title" xml:space="preserve">
+    <value>Digits</value>
+  </data>
+  <data name="MessageDialog.PrimaryButtonText" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="BackupDecryptTitle" xml:space="preserve">
+    <value>Открыть резервную копию</value>
+  </data>
+  <data name="BackupEncryptTitle" xml:space="preserve">
+    <value>Зашифровать резервную копию</value>
+  </data>
+  <data name="CameraErrorTitle" xml:space="preserve">
+    <value>Ошибка камеры</value>
+  </data>
+  <data name="CameraFrameSizeError" xml:space="preserve">
+    <value>Камера не сообщила размер кадра предпросмотра.</value>
+  </data>
+  <data name="CameraPermissionBody" xml:space="preserve">
+    <value>Разрешите Digits использовать камеру в параметрах Windows.</value>
+  </data>
+  <data name="CameraPermissionTitle" xml:space="preserve">
+    <value>Нет доступа к камере</value>
+  </data>
+  <data name="CameraStartError" xml:space="preserve">
+    <value>Не удалось запустить камеру: {0}</value>
+  </data>
+  <data name="CancelButton.Label" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="CancelDialogButton" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="DeleteTokenBody" xml:space="preserve">
+    <value>Этот токен будет удалён без возможности восстановления.</value>
+  </data>
+  <data name="DeleteTokenMenu.Text" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="DeleteTokenDialog.Title" xml:space="preserve">
+    <value>Удалить токен?</value>
+  </data>
+  <data name="DeleteTokenDialog.PrimaryButtonText" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="DeleteTokenDialog.SecondaryButtonText" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="DeviceProtectionCheckFailed" xml:space="preserve">
+    <value>Не удалось проверить защиту устройства: {0}</value>
+  </data>
+  <data name="DeviceProtectionRequiredBody" xml:space="preserve">
+    <value>Настройте PIN-код или Windows Hello в параметрах Windows, чтобы открыть Digits.</value>
+  </data>
+  <data name="DeviceProtectionRequiredTitle" xml:space="preserve">
+    <value>Требуется защита устройства</value>
+  </data>
+  <data name="DigitsExportFileTypeJson" xml:space="preserve">
+    <value>Резервная копия JSON</value>
+  </data>
+  <data name="DigitsExportFileTypeXml" xml:space="preserve">
+    <value>Резервная копия XML</value>
+  </data>
+  <data name="DigitsExportedCount" xml:space="preserve">
+    <value>Экспортировано токенов: {0}.</value>
+  </data>
+  <data name="EditTokenMenu.Text" xml:space="preserve">
+    <value>Редактировать</value>
+  </data>
+  <data name="EditTokenDialog.Title" xml:space="preserve">
+    <value>Редактирование токена</value>
+  </data>
+  <data name="EditTokenDialog.PrimaryButtonText" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="EditTokenDialog.SecondaryButtonText" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="EditTokenIssuerField.Header" xml:space="preserve">
+    <value>Сервис</value>
+  </data>
+  <data name="EditTokenAccountField.Header" xml:space="preserve">
+    <value>Учётная запись</value>
+  </data>
+  <data name="EmptyExport" xml:space="preserve">
+    <value>Нет данных для экспорта.</value>
+  </data>
+  <data name="EmptyImport" xml:space="preserve">
+    <value>Не удалось найти токены в файле.</value>
+  </data>
+  <data name="ExportBackupAction.Content" xml:space="preserve">
+    <value>Экспортировать резервную копию</value>
+  </data>
+  <data name="ExportError" xml:space="preserve">
+    <value>Ошибка экспорта: {0}</value>
+  </data>
+  <data name="ExportFinalizeError" xml:space="preserve">
+    <value>Не удалось завершить экспорт файла.</value>
+  </data>
+  <data name="ExportButton" xml:space="preserve">
+    <value>Экспортировать</value>
+  </data>
+  <data name="FileTooLarge" xml:space="preserve">
+    <value>Файл резервной копии слишком большой.</value>
+  </data>
+  <data name="HotpCounterLimit" xml:space="preserve">
+    <value>Счётчик HOTP достиг максимального значения.</value>
+  </data>
+  <data name="HotpCounterHeader" xml:space="preserve">
+    <value>Счётчик HOTP</value>
+  </data>
+  <data name="HotpCounterInvalid" xml:space="preserve">
+    <value>Счётчик HOTP должен быть неотрицательным целым числом.</value>
+  </data>
+  <data name="HotpCounterUpdateError" xml:space="preserve">
+    <value>Не удалось обновить счётчик HOTP: {0}</value>
+  </data>
+  <data name="ImportBackupAction.Content" xml:space="preserve">
+    <value>Импортировать резервную копию</value>
+  </data>
+  <data name="ImportError" xml:space="preserve">
+    <value>Ошибка импорта: {0}</value>
+  </data>
+  <data name="ImportSummary" xml:space="preserve">
+    <value>Импортировано: {0}.
+Пропущено дубликатов: {1}.
+Некорректных записей: {2}.</value>
+  </data>
+  <data name="InvalidBackupFormat" xml:space="preserve">
+    <value>Неподдерживаемый формат файла. Требуется зашифрованная резервная копия Digits в формате JSON или XML.</value>
+  </data>
+  <data name="IssuerHeader" xml:space="preserve">
+    <value>Сервис</value>
+  </data>
+  <data name="IssuerPlaceholder" xml:space="preserve">
+    <value>Например, Example</value>
+  </data>
+  <data name="LockBody" xml:space="preserve">
+    <value>Подтвердите личность с помощью PIN-кода устройства или Windows Hello.</value>
+  </data>
+  <data name="LockNeedsDeviceProtection" xml:space="preserve">
+    <value>Сначала настройте PIN-код или Windows Hello в параметрах Windows. Блокировка Digits не включена.</value>
+  </data>
+  <data name="LockTitle" xml:space="preserve">
+    <value>Digits заблокирован</value>
+  </data>
+  <data name="LockUnlockError" xml:space="preserve">
+    <value>Не удалось разблокировать Digits: {0}</value>
+  </data>
+  <data name="MainEmptyBody" xml:space="preserve">
+    <value>Нажмите «Добавить», чтобы отсканировать QR-код, или откройте меню и выберите «Добавить вручную».</value>
+  </data>
+  <data name="MainEmptyTitle" xml:space="preserve">
+    <value>Пока нет генераторов</value>
+  </data>
+  <data name="MainHeading.Text" xml:space="preserve">
+    <value>ДОБАВЛЕННЫЕ ГЕНЕРАТОРЫ</value>
+  </data>
+  <data name="ManualPageDescription" xml:space="preserve">
+    <value>Введите параметры, указанные в настройках двухфакторной аутентификации сервиса.</value>
+  </data>
+  <data name="ManualEntryMenuButton.Label" xml:space="preserve">
+    <value>Добавить вручную</value>
+  </data>
+  <data name="ManualTokenTypeHeader" xml:space="preserve">
+    <value>Тип кода</value>
+  </data>
+  <data name="NoDeviceSettingsButton" xml:space="preserve">
+    <value>Параметры</value>
+  </data>
+  <data name="NotFound" xml:space="preserve">
+    <value>Токен не найден.</value>
+  </data>
+  <data name="OpenButton" xml:space="preserve">
+    <value>Открыть</value>
+  </data>
+  <data name="OpenSettingsButton" xml:space="preserve">
+    <value>Открыть параметры</value>
+  </data>
+  <data name="QrUnsupported" xml:space="preserve">
+    <value>QR-код не содержит поддерживаемые параметры TOTP/HOTP.</value>
+  </data>
+  <data name="SaveManualTokenError" xml:space="preserve">
+    <value>Не удалось сохранить токен. Проверьте ключ и защищённое хранилище.</value>
+  </data>
+  <data name="SaveScannedTokenError" xml:space="preserve">
+    <value>Не удалось сохранить токен. Проверьте доступ к защищённому хранилищу и повторите попытку.</value>
+  </data>
+  <data name="ScanInstruction.Text" xml:space="preserve">
+    <value>Наведите камеру на QR-код</value>
+  </data>
+  <data name="SecretHeader" xml:space="preserve">
+    <value>Секретный ключ (Base32)</value>
+  </data>
+  <data name="SecretInvalid" xml:space="preserve">
+    <value>Секретный ключ содержит недопустимые символы Base32.</value>
+  </data>
+  <data name="SecretPlaceholder" xml:space="preserve">
+    <value>Вставьте ключ из страницы настроек</value>
+  </data>
+  <data name="SecretRequired" xml:space="preserve">
+    <value>Введите секретный ключ.</value>
+  </data>
+  <data name="SecretZeroLength" xml:space="preserve">
+    <value>Секретный ключ пуст.</value>
+  </data>
+  <data name="SecurityHeading.Text" xml:space="preserve">
+    <value>БЕЗОПАСНОСТЬ</value>
+  </data>
+  <data name="ServiceOrAccountRequired" xml:space="preserve">
+    <value>Укажите сервис или имя учётной записи.</value>
+  </data>
+  <data name="SettingsButton.Label" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="StorageError" xml:space="preserve">
+    <value>Не удалось открыть хранилище токенов: {0}</value>
+  </data>
+  <data name="TokenAlreadyAdded" xml:space="preserve">
+    <value>Этот токен уже добавлен.</value>
+  </data>
+  <data name="TokenDigitsHeader" xml:space="preserve">
+    <value>Количество цифр</value>
+  </data>
+  <data name="TokenDigitsInvalid" xml:space="preserve">
+    <value>Выберите длину кода: 6 или 8 цифр.</value>
+  </data>
+  <data name="TokenTypeInvalid" xml:space="preserve">
+    <value>Выберите тип TOTP или HOTP.</value>
+  </data>
+  <data name="TotpPeriodHeader" xml:space="preserve">
+    <value>Период TOTP (секунды)</value>
+  </data>
+  <data name="TotpPeriodInvalid" xml:space="preserve">
+    <value>Период TOTP должен быть от 1 до 3600 секунд.</value>
+  </data>
+  <data name="UnlockButton" xml:space="preserve">
+    <value>Разблокировать</value>
+  </data>
+  <data name="UnlockVerificationPrompt" xml:space="preserve">
+    <value>Подтвердите личность, чтобы открыть коды Digits.</value>
+  </data>
+  <data name="SettingsPageHeading.Text" xml:space="preserve">
+    <value>НАСТРОЙКИ</value>
+  </data>
+  <data name="ManualPageHeading.Text" xml:space="preserve">
+    <value>РУЧНОЕ ДОБАВЛЕНИЕ</value>
+  </data>
+  <data name="ManualPeriodBox.Text" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="ManualCounterBox.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TotpOption" xml:space="preserve">
+    <value>TOTP</value>
+  </data>
+  <data name="HotpOption" xml:space="preserve">
+    <value>HOTP</value>
+  </data>
+  <data name="Sha1Option" xml:space="preserve">
+    <value>SHA1</value>
+  </data>
+  <data name="Sha256Option" xml:space="preserve">
+    <value>SHA256</value>
+  </data>
+  <data name="Sha512Option" xml:space="preserve">
+    <value>SHA512</value>
+  </data>
+  <data name="SixDigitsOption" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="EightDigitsOption" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="GenericTokenLabel" xml:space="preserve">
+    <value>OTP</value>
+  </data>
+  <data name="TokenSecretRequired" xml:space="preserve">
+    <value>Требуется секретный ключ токена.</value>
+  </data>
+  <data name="TokenSecretNotProtected" xml:space="preserve">
+    <value>Секретный ключ сохранён в формате, который эта версия Digits не поддерживает.</value>
+  </data>
+  <data name="TokenSecretDecryptFailed" xml:space="preserve">
+    <value>Digits не удалось расшифровать сохранённый секретный ключ для текущей учётной записи Windows.</value>
+  </data>
+  <data name="UnsupportedEncryptedBackupFormat" xml:space="preserve">
+    <value>Этот формат зашифрованной резервной копии не поддерживается.</value>
+  </data>
+  <data name="EncryptedBackupDamaged" xml:space="preserve">
+    <value>Зашифрованная резервная копия повреждена.</value>
+  </data>
+  <data name="BackupPasswordIncorrectOrChanged" xml:space="preserve">
+    <value>Неверная парольная фраза или файл был изменён.</value>
+  </data>
+  <data name="PageLoadFailed" xml:space="preserve">
+    <value>Не удалось загрузить страницу {0}.</value>
+  </data>
+  <data name="MainPageLayoutError" xml:space="preserve">
+    <value>Корневой элемент MainPage.xaml не является Grid.</value>
+  </data>
+  <data name="ScannerShutdownLog" xml:space="preserve">
+    <value>Ошибка при остановке сканера: {0}</value>
+  </data>
+  <data name="CameraInitializationFailedLog" xml:space="preserve">
+    <value>Ошибка при запуске камеры: {0}</value>
+  </data>
+  <data name="AutofocusUnavailableLog" xml:space="preserve">
+    <value>Автофокус недоступен: {0}</value>
+  </data>
+  <data name="ScannedTokenSaveFailureLog" xml:space="preserve">
+    <value>Ошибка при сохранении считанного токена: {0}</value>
+  </data>
+  <data name="QrScanFailureLog" xml:space="preserve">
+    <value>Ошибка сканирования QR-кода: {0}</value>
+  </data>
+  <data name="InvalidOtpUriQueryLog" xml:space="preserve">
+    <value>Ошибка разбора параметров OTP URI: {0}</value>
+  </data>
+  <data name="StopPreviewFailureLog" xml:space="preserve">
+    <value>Ошибка при остановке предпросмотра: {0}</value>
+  </data>
+  <data name="EncryptedBackupOpenFailureLog" xml:space="preserve">
+    <value>Ошибка при открытии зашифрованной копии: {0}</value>
+  </data>
+  <data name="ManualTokenSaveFailureLog" xml:space="preserve">
+    <value>Ошибка при сохранении токена вручную: {0}</value>
+  </data>
+  <data name="MainPageXamlParseLog" xml:space="preserve">
+    <value>Ошибка разбора MainPage.xaml, HRESULT 0x{0}: {1}</value>
+  </data>
+  <data name="XamlParserDataLog" xml:space="preserve">
+    <value>Данные анализатора XAML [{0}]: {1}</value>
+  </data>
+  <data name="AppName" xml:space="preserve">
+    <value>Digits</value>
+  </data>
+  <data name="AppDescription" xml:space="preserve">
+    <value>Генератор одноразовых паролей</value>
+  </data>
+  <data name="BackupFileNamePrefix" xml:space="preserve">
+    <value>digits-backup</value>
+  </data>
+</root>
